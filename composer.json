@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Webco\\Captcha\\Widget\\": "Classes/"
+            "Alan\\Neos\\": "Classes/"
         }
     },
     "extra": {
