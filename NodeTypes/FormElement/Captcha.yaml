@@ -1,0 +1,7 @@
+'Alan.Neos.Widget:Captcha':
+  superTypes:
+    'Neos.Form.Builder:FormElement': true
+    'Neos.Form.Builder:LabelMixin': false
+    'Neos.Form.Builder:DefaultValueMixin': false
+    'Neos.Form.Builder:RequiredCheckboxMixin': false
+  label: 'Captcha'

@@ -1,0 +1,28 @@
+{
+    "name": "alan/neos",
+    "description": "Neos captcha widget",
+    "type": "neos-package",
+    "authors": [
+        {
+            "name": "Web&Co",
+            "email": "contact@webandco.com",
+            "homepage": "https://webandco.com/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "neos/neos": "*",
+        "neos/form": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webco\\Captcha\\Widget\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Alan.Neos"
+        }
+    }
+}
+

@@ -1,0 +1,12 @@
+prototype(Neos.NodeTypes.Form:Form) {
+    overrideConfiguration {
+        renderingOptions {
+            element {
+                alanCaptchaWidget {
+                    site = ${documentNode}
+                    node = ${node}
+                }
+            }
+        }
+    }
+}

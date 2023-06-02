@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="Alan.Neos" source-language="en" datatype="plaintext">
+		<body>
+			<trans-unit id="general.unverified" xml:space="preserve">
+				<source>There was an error validating</source>
+			</trans-unit>
+      <trans-unit id="general.verified" xml:space="preserve">
+        <source>Verification successful!</source>
+      </trans-unit>
+      <trans-unit id="general.working" xml:space="preserve">
+        <source>Verification in progress</source>
+      </trans-unit>
+      <trans-unit id="general.start" xml:space="preserve">
+        <source>Start verification</source>
+      </trans-unit>
+      <trans-unit id="general.hint" xml:space="preserve">
+        <source>Information</source>
+      </trans-unit>
+      <trans-unit id="general.linkText" xml:space="preserve">
+        <source>Captcha</source>
+      </trans-unit>
+      <trans-unit id="general.hintDescription" xml:space="preserve">
+        <source>This is an automatic anti-bot Captcha</source>
+      </trans-unit>
+      <trans-unit id="general.retry" xml:space="preserve">
+        <source>Retry</source>
+      </trans-unit>
+		</body>
+	</file>
+</xliff>

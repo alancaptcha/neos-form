@@ -1,0 +1,19 @@
+Neos:
+  Form:
+    presets:
+      default:
+        formElementTypes:
+          'Alan.Neos:Captcha':
+            superTypes:
+              'Neos.Form:FormElement': true
+              'Neos.Form:TextMixin': true
+            implementationClassName: Alan\Neos\FormElements\Captcha
+  Neos:
+    fusion:
+      autoInclude:
+        'Alan.Neos': true
+    userInterface:
+      translation:
+        autoInclude:
+          'Alan.Neos':
+            - 'NodeTypes/*'
