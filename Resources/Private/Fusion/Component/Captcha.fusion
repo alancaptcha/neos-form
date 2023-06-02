@@ -10,6 +10,7 @@ prototype(Alan.Neos:Component.Captcha) < prototype(Neos.Fusion:Component) {
     }
 
     renderer = afx`
+        <script src="https://captcha.webandco.com/widget/1.0.0/widget.bundle.js"></script>
         <div class="alan-captcha"
              data-sitekey={siteKey}
              data-monitortag={monitorTag}

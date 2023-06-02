@@ -32,7 +32,7 @@ class Captcha extends AbstractFormElement
      */
     public function onSubmit(FormRuntime $formRuntime, &$elementValue)
     {
-        $payload = json_decode($elementValue, true);
+        $payload = json_decode($formRuntime->getRequest()->getHttpRequest()->getParsedBody()["alan-solution"], true);
         if (!isset($payload["jwt"], $payload["solutions"])) {
             $processingRule = $this
                 ->getRootForm()
@@ -45,9 +45,10 @@ class Captcha extends AbstractFormElement
                         1668767354
                     )
                 );
+            return;
         }
         $settings = $this->configurationManager->getConfiguration(ConfigurationManager::CONFIGURATION_TYPE_SETTINGS, "Alan.Neos");
-        $ch = curl_init("https://captcha.webandco.com/challenge/validate");
+        $ch = curl_init("https://captcha.webandco.com/apdi/challenge/validate");
         $httpPayload = json_encode([
             "key" => $settings['apiKey'],
             "puzzleSolutions" => $payload["solutions"],
@@ -63,7 +64,7 @@ class Captcha extends AbstractFormElement
 
         $result = json_decode($result, true);
 
-        if (!isset($result["success"])) {
+        if (!isset($result["success"]) || $result["success"] == false) {
             $processingRule = $this
                 ->getRootForm()
                 ->getProcessingRule($this->getIdentifier());
@@ -76,6 +77,5 @@ class Captcha extends AbstractFormElement
                     )
                 );
         }
-
     }
 }

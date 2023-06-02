@@ -1,4 +1,4 @@
-'Alan.Neos.Widget:Captcha':
+'Alan.Neos:Captcha':
   superTypes:
     'Neos.Form.Builder:FormElement': true
     'Neos.Form.Builder:LabelMixin': false
