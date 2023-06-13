@@ -48,7 +48,7 @@ class Captcha extends AbstractFormElement
             return;
         }
         $settings = $this->configurationManager->getConfiguration(ConfigurationManager::CONFIGURATION_TYPE_SETTINGS, "Alan.Neos");
-        $ch = curl_init("https://captcha.webandco.com/apdi/challenge/validate");
+        $ch = curl_init("https://captcha.webandco.com/api/challenge/validate");
         $httpPayload = json_encode([
             "key" => $settings['apiKey'],
             "puzzleSolutions" => $payload["solutions"],
