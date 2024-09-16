@@ -47,10 +47,10 @@ class Captcha extends AbstractFormElement
                 );
             return;
         }
-        $settings = $this->configurationManager->getConfiguration(ConfigurationManager::CONFIGURATION_TYPE_SETTINGS, "Alan.Neos");
+        $properties = $this->getProperties();
         $ch = curl_init("https://api.alancaptcha.com/challenge/validate");
         $httpPayload = json_encode([
-            "key" => $settings['apiKey'],
+            "key" => $properties['apiKey'],
             "puzzleSolutions" => $payload["solutions"],
             'jwt' => $payload['jwt'],
         ]);

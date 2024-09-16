@@ -1,7 +1,3 @@
-{namespace ts=Neos\Fusion\ViewHelpers}
-<ts:render
-    path="alanCaptchaWidget"
-    fusionPackageKey="Alan.Neos"
-    context="{node: form.renderingOptions.element.alanCaptchaWidget.node, monitorTag: form.renderingOptions.element.alanCaptchaWidget.monitorTag}"
-/>
-<f:form.hidden property="{name}" id="{name}" value="" />
+<alan:alan name="{name}">
+    <f:render arguments="{siteKey: siteKey, monitorTag: monitorTag, name: element.identifier}" partial="Alan.Neos:CaptchaInternal" />
+</alan:alan>

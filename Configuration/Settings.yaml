@@ -8,6 +8,8 @@ Neos:
               'Neos.Form:FormElement': true
               'Neos.Form:TextMixin': true
             implementationClassName: Alan\Neos\FormElements\Captcha
+            renderingOptions:
+              templatePathPattern: 'resource://Alan.Neos/Private/Form/Captcha.html'
   Neos:
     fusion:
       autoInclude:
@@ -17,3 +19,7 @@ Neos:
         autoInclude:
           'Alan.Neos':
             - 'NodeTypes/*'
+  FluidAdaptor:
+    namespaces:
+      alan:
+        - 'Alan\Neos\ViewHelpers'
