@@ -32,7 +32,24 @@ class Captcha extends AbstractFormElement
      */
     public function onSubmit(FormRuntime $formRuntime, &$elementValue)
     {
-        $payload = json_decode($formRuntime->getRequest()->getHttpRequest()->getParsedBody()["alan-solution"], true);
+        $parsedBody = $formRuntime->getRequest()->getHttpRequest()->getParsedBody();
+
+        if (!isset($parsedBody["alan-solution"])) {
+            $processingRule = $this
+                ->getRootForm()
+                ->getProcessingRule($this->getIdentifier());
+            $processingRule
+                ->getProcessingMessages()
+                ->addError(
+                    new Error(
+                        'Captcha solution missing.',
+                        1668767354
+                    )
+                );
+            return;
+        }
+
+        $payload = json_decode($parsedBody["alan-solution"], true);
         if (!isset($payload["jwt"], $payload["solutions"])) {
             $processingRule = $this
                 ->getRootForm()

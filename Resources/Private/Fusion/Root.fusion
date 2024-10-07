@@ -1,2 +1,1 @@
-include: resource://Neos.Fusion/Private/Fusion/Root.fusion
 include: **/*.fusion

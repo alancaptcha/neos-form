@@ -1,0 +1,9 @@
+prototype(Alan.Neos:Captcha.Definition) < prototype(Neos.Form.Builder:FormElement.Definition) {
+    formElementType = 'Alan.Neos:Captcha'
+
+    properties {
+        siteKey = ${null}
+        apiKey = ${null}
+        monitorTag = ${null}
+    }
+}

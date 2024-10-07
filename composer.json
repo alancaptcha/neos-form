@@ -19,9 +19,17 @@
             "Alan\\Neos\\": "Classes/"
         }
     },
+    "suggest": {
+        "neos/form-builder": "Integrates the Flow Form Framework into Neos CMS."
+    },
     "extra": {
         "neos": {
-            "package-key": "Alan.Neos"
+            "package-key": "Alan.Neos",
+            "loading-order": {
+                "after": [
+                    "neos/form-builder"
+                ]
+            }
         }
     }
 }

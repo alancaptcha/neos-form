@@ -1,7 +1,40 @@
+'Neos.Form.Builder:FormElement':
+  abstract: true
+
 'Alan.Neos:Captcha':
   superTypes:
     'Neos.Form.Builder:FormElement': true
     'Neos.Form.Builder:LabelMixin': false
     'Neos.Form.Builder:DefaultValueMixin': false
     'Neos.Form.Builder:RequiredCheckboxMixin': false
-  label: 'Captcha'
+  label: 'Alan Captcha'
+  ui:
+    icon: 'icon-shield'
+    group: 'form.custom'
+    label: 'Alan Captcha'
+  properties:
+    siteKey:
+      type: string
+      ui:
+        label: 'Site Key'
+        reloadIfChanged: true
+        inspector:
+          group: 'formElement'
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': [ ]
+    apiKey:
+      type: string
+      ui:
+        label: 'Api Key'
+        inspector:
+          group: 'formElement'
+          position: 'after siteKey'
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': [ ]
+    monitorTag:
+      type: string
+      ui:
+        label: 'Monitor Tag'
+        inspector:
+          group: 'formElement'
+          position: 'after apiKey'

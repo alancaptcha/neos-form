@@ -6,7 +6,6 @@ Neos:
           'Alan.Neos:Captcha':
             superTypes:
               'Neos.Form:FormElement': true
-              'Neos.Form:TextMixin': true
             implementationClassName: Alan\Neos\FormElements\Captcha
             renderingOptions:
               templatePathPattern: 'resource://Alan.Neos/Private/Form/Captcha.html'
