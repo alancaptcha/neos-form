@@ -7,6 +7,7 @@ use Neos\Flow\Configuration\ConfigurationManager;
 use Neos\Form\Core\Model\AbstractFormElement;
 use Neos\Form\Core\Runtime\FormRuntime;
 use Neos\Flow\Annotations as Flow;
+use AlanCaptcha\Php\AlanApi;
 
 class Captcha extends AbstractFormElement
 {
@@ -49,8 +50,13 @@ class Captcha extends AbstractFormElement
             return;
         }
 
-        $payload = json_decode($parsedBody["alan-solution"], true);
-        if (!isset($payload["jwt"], $payload["solutions"])) {
+        $properties = $this->getProperties();
+
+        $alanApi = new AlanApi();
+        $validateResult = false;
+        try {
+            $validateResult = $alanApi->widgetValidate($properties['apiKey'], $parsedBody["alan-solution"]);
+        } catch (\InvalidArgumentException $e) {
             $processingRule = $this
                 ->getRootForm()
                 ->getProcessingRule($this->getIdentifier());
@@ -58,30 +64,14 @@ class Captcha extends AbstractFormElement
                 ->getProcessingMessages()
                 ->addError(
                     new Error(
-                        'Captcha validation failed.',
+                        'Captcha fields missing.',
                         1668767354
                     )
                 );
             return;
         }
-        $properties = $this->getProperties();
-        $ch = curl_init("https://api.alancaptcha.com/challenge/validate");
-        $httpPayload = json_encode([
-            "key" => $properties['apiKey'],
-            "puzzleSolutions" => $payload["solutions"],
-            'jwt' => $payload['jwt'],
-        ]);
 
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $httpPayload);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $result = curl_exec($ch);
-        curl_close($ch);
-
-        $result = json_decode($result, true);
-
-        if (!isset($result["success"]) || $result["success"] == false) {
+        if (!$validateResult) {
             $processingRule = $this
                 ->getRootForm()
                 ->getProcessingRule($this->getIdentifier());

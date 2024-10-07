@@ -12,7 +12,8 @@
     ],
     "require": {
         "neos/neos": "*",
-        "neos/form": "*"
+        "neos/form": "*",
+        "alancaptcha/php": "0.0.1"
     },
     "autoload": {
         "psr-4": {
