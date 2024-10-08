@@ -1,0 +1,14 @@
+<script>
+    let fieldName = '<f:format.raw>{fieldName}</f:format.raw>';
+    let captchaInput = document.querySelector('input[name="' + fieldName + '"]');
+    let alanCaptcha = captchaInput.parentElement.querySelector('.alan-captcha');
+
+    let i = setInterval(() => {
+        if (alanCaptcha.hasChildNodes()) {
+            clearInterval(i);
+            AlanCaptcha.widget(alanCaptcha).addEventListener('onChallengeSolved', event => {
+                captchaInput.value = JSON.stringify(event.detail.solutionPayLoad);
+            });
+        }
+    }, 50);
+</script>

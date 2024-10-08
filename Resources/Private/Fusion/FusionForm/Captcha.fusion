@@ -1,0 +1,16 @@
+prototype(Alan.Neos:FusionForm.Captcha) < prototype(Neos.Fusion.Form:Component.Field) {
+    attributes.type = 'hidden'
+
+    siteKey = ''
+    monitorTag = ''
+
+    renderer = afx`
+        <input
+            name={field.getName()}
+            value={field.getCurrentValueStringified() || field.getTargetValueStringified()}
+            {...props.attributes}
+        />
+        <Neos.Fusion:Template templatePath="resource://Alan.Neos/Private/Templates/FusionObjects/Captcha.html" siteKey={props.siteKey} monitorTag={props.monitorTag} fieldName={field.getName()} />
+        <Alan.Neos:FusionForm.Fragment.CaptchaScript fieldName={field.getName()} />
+    `
+}
