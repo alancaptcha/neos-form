@@ -12,6 +12,12 @@
     icon: 'icon-shield'
     group: 'form.custom'
     label: 'Alan Captcha'
+    inspector:
+      groups:
+        'lang':
+          label: 'Translations'
+          position: 80
+          icon: 'icon-square-o'
   properties:
     siteKey:
       type: string
@@ -38,3 +44,33 @@
         inspector:
           group: 'formElement'
           position: 'after apiKey'
+    unverifiedtext:
+      type: string
+      ui:
+        label: 'unverifiedtext'
+        inspector:
+          group: 'lang'
+    verifiedtext:
+      type: string
+      ui:
+        label: 'verifiedtext'
+        inspector:
+          group: 'lang'
+    retrytext:
+      type: string
+      ui:
+        label: 'retrytext'
+        inspector:
+          group: 'lang'
+    workingtext:
+      type: string
+      ui:
+        label: 'workingtext'
+        inspector:
+          group: 'lang'
+    starttext:
+      type: string
+      ui:
+        label: 'starttext'
+        inspector:
+          group: 'lang'

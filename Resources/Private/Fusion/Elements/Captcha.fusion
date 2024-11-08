@@ -5,5 +5,12 @@ prototype(Alan.Neos:Captcha.Definition) < prototype(Neos.Form.Builder:FormElemen
         siteKey = ${null}
         apiKey = ${null}
         monitorTag = ${null}
+        lang = Neos.Fusion:DataStructure {
+            unverifiedtext = ${null}
+            verifiedtext = ${null}
+            retrytext = ${null}
+            workingtext = ${null}
+            starttext = ${null}
+        }
     }
 }

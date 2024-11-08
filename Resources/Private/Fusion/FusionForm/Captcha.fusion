@@ -3,6 +3,13 @@ prototype(Alan.Neos:FusionForm.Captcha) < prototype(Neos.Fusion.Form:Component.F
 
     siteKey = ''
     monitorTag = ''
+    lang = Neos.Fusion:DataStructure {
+        unverifiedtext = ${null}
+        verifiedtext = ${null}
+        retrytext = ${null}
+        workingtext = ${null}
+        starttext = ${null}
+    }
 
     renderer = afx`
         <input
@@ -10,7 +17,7 @@ prototype(Alan.Neos:FusionForm.Captcha) < prototype(Neos.Fusion.Form:Component.F
             value={field.getCurrentValueStringified() || field.getTargetValueStringified()}
             {...props.attributes}
         />
-        <Neos.Fusion:Template templatePath="resource://Alan.Neos/Private/Templates/FusionObjects/Captcha.html" siteKey={props.siteKey} monitorTag={props.monitorTag} fieldName={field.getName()} />
+        <Neos.Fusion:Template templatePath="resource://Alan.Neos/Private/Templates/FusionObjects/Captcha.html" siteKey={props.siteKey} monitorTag={props.monitorTag} fieldName={field.getName()} lang={props.lang} />
         <Alan.Neos:FusionForm.Fragment.CaptchaScript fieldName={field.getName()} />
     `
 }
