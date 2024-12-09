@@ -1,6 +1,6 @@
 <?php
 
-namespace Alan\Neos\Validation\Validator;
+namespace Alan\NeosForm\Validation\Validator;
 
 use AlanCaptcha\Php\AlanApi;
 use Neos\Flow\Validation\Validator\AbstractValidator;

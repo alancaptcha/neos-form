@@ -1,5 +1,5 @@
 <?php
-namespace Alan\Neos\ViewHelpers;
+namespace Alan\NeosForm\ViewHelpers;
 
 use Neos\FluidAdaptor\ViewHelpers\Form\AbstractFormViewHelper;
 use Neos\FluidAdaptor\ViewHelpers\FormViewHelper;

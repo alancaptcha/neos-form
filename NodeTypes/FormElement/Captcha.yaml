@@ -1,7 +1,7 @@
 'Neos.Form.Builder:FormElement':
   abstract: true
 
-'Alan.Neos:Captcha':
+'Alan.NeosForm:Captcha':
   superTypes:
     'Neos.Form.Builder:FormElement': true
     'Neos.Form.Builder:LabelMixin': false

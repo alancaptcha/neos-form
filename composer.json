@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Alan\\Neos\\": "Classes/"
+            "Alan\\NeosForm\\": "Classes/"
         }
     },
     "suggest": {
@@ -25,7 +25,7 @@
     },
     "extra": {
         "neos": {
-            "package-key": "Alan.Neos",
+            "package-key": "Alan.NeosForm",
             "loading-order": {
                 "after": [
                     "neos/form-builder"

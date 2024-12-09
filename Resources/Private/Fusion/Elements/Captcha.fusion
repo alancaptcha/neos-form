@@ -1,5 +1,5 @@
-prototype(Alan.Neos:Captcha.Definition) < prototype(Neos.Form.Builder:FormElement.Definition) {
-    formElementType = 'Alan.Neos:Captcha'
+prototype(Alan.NeosForm:Captcha.Definition) < prototype(Neos.Form.Builder:FormElement.Definition) {
+    formElementType = 'Alan.NeosForm:Captcha'
 
     properties {
         siteKey = ${null}

@@ -1,6 +1,6 @@
 <?php
 
-namespace Alan\Neos\FormElements;
+namespace Alan\NeosForm\FormElements;
 
 use Neos\Error\Messages\Error;
 use Neos\Flow\Configuration\ConfigurationManager;

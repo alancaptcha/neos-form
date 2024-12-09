@@ -1,5 +1,5 @@
 <?php
-namespace Alan\Neos\ViewHelpers;
+namespace Alan\NeosForm\ViewHelpers;
 
 use Neos\Flow\Annotations as Flow;
 use Neos\FluidAdaptor\Core\ViewHelper\AbstractViewHelper;

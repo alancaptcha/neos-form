@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file original="" product-name="Alan.Neos" source-language="de" datatype="plaintext">
+	<file original="" product-name="Alan.NeosForm" source-language="de" datatype="plaintext">
 		<body>
       <trans-unit id="general.unverified" xml:space="preserve">
         <source>Ein Fehler ist bei der Verifizierung aufgetreten</source>

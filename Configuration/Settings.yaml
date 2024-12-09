@@ -3,22 +3,22 @@ Neos:
     presets:
       default:
         formElementTypes:
-          'Alan.Neos:Captcha':
+          'Alan.NeosForm.Form:Captcha':
             superTypes:
               'Neos.Form:FormElement': true
-            implementationClassName: Alan\Neos\FormElements\Captcha
+            implementationClassName: Alan\NeosForm\FormElements\Captcha
             renderingOptions:
-              templatePathPattern: 'resource://Alan.Neos/Private/Form/Captcha.html'
+              templatePathPattern: 'resource://Alan.NeosForm/Private/Form/Captcha.html'
   Neos:
     fusion:
       autoInclude:
-        'Alan.Neos': true
+        'Alan.NeosForm': true
     userInterface:
       translation:
         autoInclude:
-          'Alan.Neos':
+          'Alan.NeosForm':
             - 'NodeTypes/*'
   FluidAdaptor:
     namespaces:
-      alan:
-        - 'Alan\Neos\ViewHelpers'
+      alan-form:
+        - 'Alan\NeosFrom\ViewHelpers'
