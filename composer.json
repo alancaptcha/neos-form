@@ -1,5 +1,5 @@
 {
-    "name": "alan/neos",
+    "name": "alan/neos-form",
     "description": "Neos captcha widget",
     "type": "neos-package",
     "authors": [
