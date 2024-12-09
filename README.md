@@ -1,4 +1,4 @@
-# Alan.Neos
+# Alan.NeosForm
 
 Neos plugin to integrate [AlanCaptcha](https://alancaptcha.com/) into Forms. The following form integrations are supported:
 
@@ -11,7 +11,7 @@ Neos plugin to integrate [AlanCaptcha](https://alancaptcha.com/) into Forms. The
 Require the package using composer:
 
 ```bash
-composer require alan/neos
+composer require alan/neos-form
 ```
 
 Create an account on the [AlanCaptcha Admin Panel](https://my.alancaptcha.com/) and get your Site key and Api key. This is further explained in the [AlanCaptcha documentation](https://docs.alancaptcha.com).
@@ -29,7 +29,7 @@ renderables:
     identifier: page-one
     renderables:
       -
-        type: 'Alan.Neos:Captcha'
+        type: 'Alan.NeosForm:Captcha'
         identifier: captcha
         label: 'Alan Captcha'
         properties:
@@ -49,11 +49,11 @@ Configure the element with your AlanCaptcha Api key and Site key.
 
 ## Usage with [Neos.Fusion.Form](https://github.com/neos/fusion-form)
 
-Add a `FieldContainer` with the `Alan.Neos:FusionForm.Captcha` element to your form:
+Add a `FieldContainer` with the `Alan.NeosForm:FusionForm.Captcha` element to your form:
 
 ```
 <Neos.Fusion.Form:FieldContainer field.name="captcha">
-    <Alan.Neos:FusionForm.Captcha siteKey="SITE_KEY" />
+    <Alan.NeosForm:FusionForm.Captcha siteKey="SITE_KEY" />
 </Neos.Fusion.Form:FieldContainer>
 ```
 
@@ -65,7 +65,7 @@ The following options are available:
 Then, add the field to the schema and configure the Validator:
 
 ```
-captcha = ${Form.Schema.string().validator('Alan.Neos:IsValid', {apiKey: 'API_KEY', errorMessage: 'The Alan Captcha check failed. Try submitting the form again.'})}
+captcha = ${Form.Schema.string().validator('Alan.NeosForm:IsValid', {apiKey: 'API_KEY', errorMessage: 'The Alan Captcha check failed. Try submitting the form again.'})}
 ```
 
 Make sure that the key (e.g. captcha) matches the key in the FieldContainer (see above).
