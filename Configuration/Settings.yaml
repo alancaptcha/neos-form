@@ -3,7 +3,7 @@ Neos:
     presets:
       default:
         formElementTypes:
-          'Alan.NeosForm.Form:Captcha':
+          'Alan.NeosForm:Captcha':
             superTypes:
               'Neos.Form:FormElement': true
             implementationClassName: Alan\NeosForm\FormElements\Captcha
@@ -20,5 +20,5 @@ Neos:
             - 'NodeTypes/*'
   FluidAdaptor:
     namespaces:
-      alan-form:
+      alanform:
         - 'Alan\NeosFrom\ViewHelpers'
