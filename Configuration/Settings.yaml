@@ -20,5 +20,4 @@ Neos:
             - 'NodeTypes/*'
   FluidAdaptor:
     namespaces:
-      alanform:
-        - 'Alan\NeosFrom\ViewHelpers'
+      alanForm: 'Alan\NeosForm\ViewHelpers'

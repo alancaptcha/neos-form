@@ -1,4 +1,4 @@
-prototype(Alan.NeosFrom:FusionForm.Fragment.CaptchaScript) < prototype(Neos.Fusion:Template) {
+prototype(Alan.NeosForm:FusionForm.Fragment.CaptchaScript) < prototype(Neos.Fusion:Template) {
     templatePath = 'resource://Alan.NeosForm/Private/Templates/FusionObjects/CaptchaScript.html'
 
     fieldName = ''
