@@ -11,7 +11,7 @@ Neos plugin to integrate [AlanCaptcha](https://alancaptcha.com/) into Forms. The
 Require the package using composer:
 
 ```bash
-composer require alan/neos-form
+composer require alancaptcha/neos-form
 ```
 
 Create an account on the [AlanCaptcha Admin Panel](https://my.alancaptcha.com/) and get your Site key and Api key. This is further explained in the [AlanCaptcha documentation](https://docs.alancaptcha.com).
