@@ -36,10 +36,17 @@ renderables:
             apiKey: 'API_KEY'
             siteKey: 'SITE_KEY'
             monitorTag: 'MONITOR_TAG (optional)'
+            unverifiedtext: '<<Unverified>>'
+            verifiedtext: '<<Verified>>'
+            retrytext: '<<Retry>>'
+            workingtext: '<<Working...'
+            starttext: '<<Start>>'
 finishers:
   -
     <Your finishers here>
 ```
+
+The text properties are optional and can be used to customize the text of the captcha element.
 
 ## Usage with [Neos.Form.Builder](https://github.com/neos/form-builder)
 
@@ -61,6 +68,12 @@ Set the field name based on our needs, but make sure to use the same field name 
 
 The following options are available:
 - `siteKey` (required): The AlanCaptcha Site Key.
+- `monitorTag` (optional): The AlanCaptcha Monitor Tag to use.
+- `lang.unverifiedtext` (optional): The AlanCaptcha Monitor Tag to use.
+- `lang.verifiedtext` (optional)
+- `lang.retrytext` (optional)
+- `lang.workingtext` (optional)
+- `lang.starttext` (optional)
 
 Then, add the field to the schema and configure the Validator:
 

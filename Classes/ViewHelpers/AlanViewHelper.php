@@ -26,7 +26,13 @@ class AlanViewHelper extends AbstractFormViewHelper
 
         $this->templateVariableContainer->add('siteKey', $captchaElement->getProperty('siteKey'));
         $this->templateVariableContainer->add('monitorTag', $captchaElement->getProperty('monitorTag'));
-        $this->templateVariableContainer->add('lang', $captchaElement->getProperty('lang'));
+        $this->templateVariableContainer->add('lang', [
+            'unverifiedtext' => $captchaElement->getProperty('unverifiedtext'),
+            'verifiedtext' => $captchaElement->getProperty('verifiedtext'),
+            'retrytext' => $captchaElement->getProperty('retrytext'),
+            'workingtext' => $captchaElement->getProperty('workingtext'),
+            'starttext' => $captchaElement->getProperty('starttext')
+        ]);
         $this->templateVariableContainer->add('uniqueIdentifier', $captchaElement->getUniqueIdentifier());
         $this->templateVariableContainer->add('identifier', $captchaElement->getIdentifier());
 
