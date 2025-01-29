@@ -1,6 +1,7 @@
 {
     "name": "alancaptcha/neos-form",
     "description": "Neos captcha widget",
+    "license": "MIT",
     "type": "neos-package",
     "authors": [
         {
@@ -34,4 +35,3 @@
         }
     }
 }
-
