@@ -56,7 +56,7 @@ class Captcha extends AbstractFormElement
         $validateResult = false;
         try {
             $validateResult = $alanApi->widgetValidate($properties['apiKey'], $parsedBody["alan-solution"]);
-        } catch (\InvalidArgumentException $e) {
+        } catch (\InvalidArgumentException | \JsonException $e) {
             $processingRule = $this
                 ->getRootForm()
                 ->getProcessingRule($this->getIdentifier());
